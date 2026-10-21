@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>@ViewBag.Title - Tiệm Sách Bình Yên</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="head">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <h2 class="navbar-brand" href="#">Tiệm Sách 4 thằng khùng</h2>
+                <a class="navbar-nav" href="#">Trang chủ</a>
+                <a class="navbar-nav" href="#">Thể loại</a>
+                <a class="navbar-nav" href="#">Bán chạy</a>
+                <a class="navbar-nav" href="#">Khuyến mãi</a>
+                <div class="search">
+                    <form>
+                        <input type="text" class="text-research" placeholder="Tìm kiếm sách, tác giả" name="Search">
+                        <button type="submit" class="button-research fa fa-search"></button>
+                    </form>
+                </div>
+                <i class=" heart fa-regular fa-heart"></i>
+                <i class="fa fa-shopping-cart"></i>
+                <a class="login" href="#"><i class="fa fa-user"></i> Đăng nhập</a>
+            </div>
+        </nav>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="text-align: center;">&copy; @DateTime.Now.Year - Lê Quang Minh</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
